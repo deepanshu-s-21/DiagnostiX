@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DiagnostiX - Gallery</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px var(--shadow);
+            cursor: pointer;
+            transition: transform 0.3s;
+            background: var(--bg-secondary);
+            min-height: 250px;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+
+        .gallery-content {
+            padding: 2rem;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .gallery-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .gallery-title {
+            color: var(--accent-primary);
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 0.75rem;
+        }
+
+        .gallery-desc {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .features-showcase {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .feature-showcase {
+            background: var(--bg-card);
+            padding: 2rem;
+            border-radius: 12px;
+            border-left: 4px solid var(--accent-primary);
+        }
+
+        .feature-showcase h3 {
+            color: var(--accent-primary);
+            margin-bottom: 1rem;
+        }
+
+        .tabs {
+            display: flex;
+            gap: 0;
+            margin-bottom: 2rem;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .tab-btn {
+            padding: 1rem;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--text-secondary);
+            font-weight: 500;
+            transition: all 0.3s;
+            border-bottom: 3px solid transparent;
+        }
+
+        .tab-btn:hover {
+            color: var(--accent-primary);
+        }
+
+        .tab-btn.active {
+            color: var(--accent-primary);
+            border-bottom-color: var(--accent-primary);
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <span class="logo-icon">❤️</span>
+                <span>DiagnostiX</span>
+            </div>
+            <nav class="nav-menu">
+                <a href="landing.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="gallery.html" class="nav-link">Gallery</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="index.html" class="nav-link">Login</a>
+            </nav>
+            <div class="controls">
+                <select class="lang-select" id="langSelect">
+                    <option value="en">English</option>
+                    <option value="hi">हिंदी</option>
+                </select>
+                <button class="theme-toggle" id="themeToggle">🌙</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1 style="text-align: center; margin: 2rem 0;">📸 Gallery & Features</h1>
+
+        <!-- Tabs for different sections -->
+        <div class="tabs">
+            <button class="tab-btn active" onclick="switchTab(event, 'features')">Features</button>
+            <button class="tab-btn" onclick="switchTab(event, 'screenshots')">User Interface</button>
+            <button class="tab-btn" onclick="switchTab(event, 'tech')">Technology</button>
+        </div>
+
+        <!-- Features Tab -->
+        <div id="features" class="tab-content active">
+            <h2 style="margin-bottom: 2rem; color: var(--accent-primary);">✨ Key Features</h2>
+            <div class="features-showcase">
+                <div class="feature-showcase">
+                    <h3>🎯 AI-Powered Predictions</h3>
+                    <p>Advanced machine learning models trained on real medical data to provide accurate risk assessments for heart disease detection.</p>
+                </div>
+                <div class="feature-showcase">
+                    <h3>🖱️ Drag & Drop Interface</h3>
+                    <p>Intuitive symptom selection using drag-and-drop technology. Simply drag your symptoms to the selection area.</p>
+                </div>
+                <div class="feature-showcase">
+                    <h3>🔒 Secure Authentication</h3>
+                    <p>JWT-based authentication with encrypted passwords ensures your account and health data remain completely secure.</p>
+                </div>
+                <div class="feature-showcase">
+                    <h3>🌍 Multi-Language Support</h3>
+                    <p>Access DiagnostiX in multiple languages including English and Hindi with full page translation.</p>
+                </div>
+                <div class="feature-showcase">
+                    <h3>🌓 Dark & Light Themes</h3>
+                    <p>Choose between dark and light themes for comfortable viewing at any time of day.</p>
+                </div>
+                <div class="feature-showcase">
+                    <h3>📊 Assessment History</h3>
+                    <p>Track your assessment history, view trends, and monitor your heart health progress over time.</p>
+                </div>
+                <div class="feature-showcase">
+                    <h3>📱 Responsive Design</h3>
+                    <p>Seamlessly works on all devices - desktop, tablet, and mobile with optimized layouts.</p>
+                </div>
+                <div class="feature-showcase">
+                    <h3>⚡ Real-time Results</h3>
+                    <p>Get instant risk assessment and personalized health recommendations within seconds.</p>
+                </div>
+                <div class="feature-showcase">
+                    <h3>🎨 Beautiful UI/UX</h3>
+                    <p>Modern, professional design with smooth animations and intuitive navigation throughout.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Screenshots Tab -->
+        <div id="screenshots" class="tab-content">
+            <h2 style="margin-bottom: 2rem; color: var(--accent-primary);">🖼️ User Interface Screens</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <div class="gallery-content">
+                        <div class="gallery-icon">🔐</div>
+                        <div class="gallery-title">Login & Signup</div>
+                        <div class="gallery-desc">Secure authentication with user registration and JWT token management</div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-content">
+                        <div class="gallery-icon">📋</div>
+                        <div class="gallery-title">Dashboard</div>
+                        <div class="gallery-desc">Central hub with quick access to assessments and history</div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-content">
+                        <div class="gallery-icon">🖱️</div>
+                        <div class="gallery-title">Symptom Selection</div>
+                        <div class="gallery-desc">Innovative drag-and-drop interface for selecting symptoms</div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-content">
+                        <div class="gallery-icon">📊</div>
+                        <div class="gallery-title">Results Display</div>
+                        <div class="gallery-desc">Animated risk percentage with color-coded severity levels</div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-content">
+                        <div class="gallery-icon">💬</div>
+                        <div class="gallery-title">Recommendations</div>
+                        <div class="gallery-desc">Personalized health recommendations based on assessment results</div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-content">
+                        <div class="gallery-icon">📈</div>
+                        <div class="gallery-title">History Tracking</div>
+                        <div class="gallery-desc">View and manage all your previous assessments</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Technology Tab -->
+        <div id="tech" class="tab-content">
+            <h2 style="margin-bottom: 2rem; color: var(--accent-primary);">💻 Technology Stack</h2>
+            <div class="features-showcase">
+                <div class="feature-showcase">
+                    <h3>Frontend</h3>
+                    <p><strong>HTML5, CSS3, JavaScript</strong><br>Responsive design with modern web standards</p>
+                </div>
+                <div class="feature-showcase">
+                    <h3>Backend</h3>
+                    <p><strong>Python Flask</strong><br>RESTful API with CORS support</p>
+                </div>
+                <div class="feature-showcase">
+                    <h3>Machine Learning</h3>
+                    <p><strong>scikit-learn</strong><br>Random Forest classifier with 90% accuracy</p>
+                </div>
+                <div class="feature-showcase">
+                    <h3>Database</h3>
+                    <p><strong>SQLite</strong><br>Lightweight with easy deployment</p>
+                </div>
+                <div class="feature-showcase">
+                    <h3>Authentication</h3>
+                    <p><strong>JWT Tokens</strong><br>Secure session management</p>
+                </div>
+                <div class="feature-showcase">
+                    <h3>Data Processing</h3>
+                    <p><strong>Pandas & NumPy</strong><br>Efficient data manipulation</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Call to Action -->
+        <div style="text-align: center; padding: 2rem; background: var(--bg-secondary); border-radius: 12px; margin-top: 3rem;">
+            <h3 style="margin-bottom: 1rem;">Ready to Experience DiagnostiX?</h3>
+            <a href="signup.html" class="btn btn-primary">Sign Up Now</a>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="landing.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+            <a href="index.html">Login</a>
+        </div>
+        <p style="color: var(--text-secondary); margin-bottom: 0.5rem;">
+            &copy; 2025 DiagnostiX. All rights reserved.
+        </p>
+    </footer>
+
+    <script src="theme.js"></script>
+    <script src="i18n.js"></script>
+    <script>
+        function switchTab(event, tabName) {
+            // Hide all tabs
+            const tabs = document.querySelectorAll('.tab-content');
+            tabs.forEach(tab => tab.classList.remove('active'));
+
+            // Remove active class from all buttons
+            const buttons = document.querySelectorAll('.tab-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+
+            // Show selected tab
+            document.getElementById(tabName).classList.add('active');
+            event.target.classList.add('active');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DiagnostiX - AI Health Prediction Platform</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .landing-hero {
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            color: white;
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-buttons .btn {
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            border: none;
+        }
+
+        .btn-light {
+            background: white;
+            color: var(--accent-primary);
+        }
+
+        .btn-light:hover {
+            background: #f0f0f0;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .feature-box {
+            background: var(--bg-card);
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s;
+        }
+
+        .feature-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px var(--shadow);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-box h3 {
+            color: var(--accent-primary);
+            margin-bottom: 0.75rem;
+        }
+
+        .stats-section {
+            background: var(--bg-secondary);
+            padding: 3rem;
+            border-radius: 12px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            color: var(--accent-primary);
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer {
+            background: var(--bg-secondary);
+            padding: 2rem;
+            text-align: center;
+            margin-top: 3rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: var(--accent-primary);
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+
+        .footer-links a:hover {
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <span class="logo-icon">❤️</span>
+                <span>DiagnostiX</span>
+            </div>
+            <nav class="nav-menu">
+                <a href="landing.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="gallery.html" class="nav-link">Gallery</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="index.html" class="nav-link">Login</a>
+            </nav>
+            <div class="controls">
+                <select class="lang-select" id="langSelect">
+                    <option value="en">English</option>
+                    <option value="hi">हिंदी</option>
+                </select>
+                <button class="theme-toggle" id="themeToggle">🌙</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="landing-hero">
+        <div class="hero-content">
+            <h1>❤️ DiagnostiX</h1>
+            <p>AI-Powered Early Detection for Heart Disease Prevention</p>
+            <p style="font-size: 0.95rem; margin-bottom: 2rem;">
+                Get personalized heart health insights using advanced machine learning
+            </p>
+            <div class="cta-buttons">
+                <a href="signup.html" class="btn btn-primary">Get Started Free</a>
+                <a href="about.html" class="btn btn-light">Learn More</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Features Section -->
+        <div style="margin-top: 3rem;">
+            <h2 style="text-align: center; margin-bottom: 2rem;">Why Choose DiagnostiX?</h2>
+            <div class="features-grid">
+                <div class="feature-box">
+                    <div class="feature-icon">🤖</div>
+                    <h3>AI-Powered</h3>
+                    <p>Advanced machine learning algorithms trained on real medical data</p>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Secure & Private</h3>
+                    <p>JWT authentication and encrypted data storage for your peace of mind</p>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Instant Results</h3>
+                    <p>Get personalized risk assessment and recommendations in seconds</p>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon">📱</div>
+                    <h3>Responsive Design</h3>
+                    <p>Works seamlessly on desktop, tablet, and mobile devices</p>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon">🌍</div>
+                    <h3>Multi-Language</h3>
+                    <p>Support for English, Hindi, and more languages</p>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon">📊</div>
+                    <h3>Track History</h3>
+                    <p>Monitor your assessments over time and see progress</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stats Section -->
+        <div class="stats-section">
+            <div class="stat-item">
+                <h3>90%</h3>
+                <p>Accuracy Rate</p>
+            </div>
+            <div class="stat-item">
+                <h3>1000+</h3>
+                <p>Assessments</p>
+            </div>
+            <div class="stat-item">
+                <h3>24/7</h3>
+                <p>Availability</p>
+            </div>
+            <div class="stat-item">
+                <h3>SDG 3</h3>
+                <p>Aligned</p>
+            </div>
+        </div>
+
+        <!-- How It Works -->
+        <div style="margin: 3rem 0;">
+            <h2 style="text-align: center; margin-bottom: 2rem;">How It Works</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem;">
+                <div style="text-align: center;">
+                    <div style="font-size: 2.5rem; color: var(--accent-primary); margin-bottom: 1rem;">1️⃣</div>
+                    <h3>Register</h3>
+                    <p>Create your account in seconds</p>
+                </div>
+                <div style="text-align: center;">
+                    <div style="font-size: 2.5rem; color: var(--accent-primary); margin-bottom: 1rem;">2️⃣</div>
+                    <h3>Enter Symptoms</h3>
+                    <p>Drag and drop your symptoms easily</p>
+                </div>
+                <div style="text-align: center;">
+                    <div style="font-size: 2.5rem; color: var(--accent-primary); margin-bottom: 1rem;">3️⃣</div>
+                    <h3>Get Results</h3>
+                    <p>Instant AI-powered assessment</p>
+                </div>
+                <div style="text-align: center;">
+                    <div style="font-size: 2.5rem; color: var(--accent-primary); margin-bottom: 1rem;">4️⃣</div>
+                    <h3>Track Progress</h3>
+                    <p>View your history and trends</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="landing.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+            <a href="index.html">Login</a>
+        </div>
+        <p style="color: var(--text-secondary); margin-bottom: 0.5rem;">
+            &copy; 2025 DiagnostiX. All rights reserved.
+        </p>
+        <p style="color: var(--text-secondary); font-size: 0.9rem;">
+            Aligned with UN SDG 3: Good Health and Well-being
+        </p>
+    </footer>
+
+    <script src="theme.js"></script>
+    <script src="i18n.js"></script>
+</body>
+</html>

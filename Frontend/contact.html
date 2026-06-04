@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DiagnostiX - Contact Us</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .contact-wrapper {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .info-item {
+            padding: 1.5rem;
+            background: var(--bg-card);
+            border-left: 4px solid var(--accent-primary);
+            border-radius: 8px;
+        }
+
+        .info-item h3 {
+            color: var(--accent-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .info-item p {
+            color: var(--text-secondary);
+            margin: 0;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background: var(--accent-primary);
+            color: white;
+            border-radius: 50%;
+            text-decoration: none;
+            transition: all 0.3s;
+            font-size: 1.5rem;
+        }
+
+        .social-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+        }
+
+        .contact-form {
+            background: var(--bg-card);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--text-primary);
+        }
+
+        .form-input, .form-textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+            font-family: inherit;
+            transition: border-color 0.3s;
+        }
+
+        .form-input:focus, .form-textarea:focus {
+            outline: none;
+            border-color: var(--accent-primary);
+        }
+
+        .form-textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .faq-section {
+            margin-top: 3rem;
+        }
+
+        .faq-item {
+            background: var(--bg-card);
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 500;
+            color: var(--accent-primary);
+        }
+
+        .faq-question:hover {
+            background: var(--bg-secondary);
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s;
+            color: var(--text-secondary);
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 0 1.5rem 1.5rem;
+            max-height: 500px;
+        }
+
+        .faq-toggle {
+            font-size: 1.5rem;
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .faq-toggle {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <span class="logo-icon">❤️</span>
+                <span>DiagnostiX</span>
+            </div>
+            <nav class="nav-menu">
+                <a href="landing.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="gallery.html" class="nav-link">Gallery</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="index.html" class="nav-link">Login</a>
+            </nav>
+            <div class="controls">
+                <select class="lang-select" id="langSelect">
+                    <option value="en">English</option>
+                    <option value="hi">हिंदी</option>
+                </select>
+                <button class="theme-toggle" id="themeToggle">🌙</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1 style="text-align: center; margin: 2rem 0;">📞 Get In Touch</h1>
+
+        <!-- Contact Wrapper -->
+        <div class="contact-wrapper">
+            <!-- Contact Info -->
+            <div class="contact-info">
+                <h2 style="color: var(--accent-primary); margin-bottom: 1rem;">Contact Information</h2>
+
+                <div class="info-item">
+                    <h3>📧 Email</h3>
+                    <p><a href="mailto:info@diagnostixheart.com" style="color: var(--accent-primary); text-decoration: none;">
+                        info@diagnostixheart.com
+                    </a></p>
+                </div>
+
+                <div class="info-item">
+                    <h3>📱 Phone</h3>
+                    <p><a href="tel:+919876543210" style="color: var(--accent-primary); text-decoration: none;">
+                        +91 9876543210
+                    </a></p>
+                </div>
+
+                <div class="info-item">
+                    <h3>📍 Address</h3>
+                    <p>Tech Innovation Hub<br>
+                    New Delhi, India<br>
+                    110001</p>
+                </div>
+
+                <div class="info-item">
+                    <h3>⏰ Hours</h3>
+                    <p>Monday - Friday: 9:00 AM - 6:00 PM<br>
+                    Saturday: 10:00 AM - 4:00 PM<br>
+                    Sunday: Closed</p>
+                </div>
+
+                <div class="info-item">
+                    <h3>🔗 Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link" title="Facebook">f</a>
+                        <a href="#" class="social-link" title="Twitter">𝕏</a>
+                        <a href="#" class="social-link" title="LinkedIn">in</a>
+                        <a href="#" class="social-link" title="Instagram">📷</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="contact-form">
+                <h2 style="color: var(--accent-primary); margin-bottom: 1rem;">Send us a Message</h2>
+
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label class="form-label">Name *</label>
+                        <input type="text" class="form-input" id="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Email *</label>
+                        <input type="email" class="form-input" id="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Subject *</label>
+                        <input type="text" class="form-input" id="subject" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Message *</label>
+                        <textarea class="form-textarea" id="message" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" style="width: 100%; margin-bottom: 1rem;">
+                        Send Message
+                    </button>
+                </form>
+
+                <div id="formAlert"></div>
+            </div>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="faq-section">
+            <h2 style="text-align: center; color: var(--accent-primary); margin-bottom: 2rem;">❓ Frequently Asked Questions</h2>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(event)">
+                    <span>Is DiagnostiX a replacement for medical diagnosis?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    No, DiagnostiX is an AI-powered preliminary screening tool. It should not be considered a substitute for professional medical advice. Always consult with a qualified healthcare professional for accurate diagnosis and treatment.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(event)">
+                    <span>How accurate is the AI model?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    Our machine learning model achieved approximately 90% accuracy on validated medical datasets. However, accuracy can vary based on input data quality and individual variations. We continuously work to improve our models.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(event)">
+                    <span>Is my health data secure?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    Yes! We use JWT authentication, encrypted password storage, and secure data handling practices. Your health data is protected and never shared with third parties without your consent.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(event)">
+                    <span>Can I access DiagnostiX on mobile?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    Yes! DiagnostiX is fully responsive and works seamlessly on desktop, tablet, and mobile devices. A dedicated mobile app is coming soon!
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(event)">
+                    <span>What languages are supported?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    Currently, we support English and हिंदी (Hindi). We're continuously adding more languages. You can easily switch languages using the selector in the top right corner.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(event)">
+                    <span>How do I view my assessment history?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    After logging in, go to your Dashboard and click on "History". You'll see all your previous assessments with dates, risk levels, and risk percentages. This helps you track your health over time.
+                </div>
+            </div>
+        </div>
+
+        <!-- Call to Action -->
+        <div style="text-align: center; padding: 2rem; background: var(--bg-secondary); border-radius: 12px; margin-top: 3rem;">
+            <h3 style="margin-bottom: 1rem;">Have Questions? We're Here to Help!</h3>
+            <p style="margin-bottom: 1.5rem; color: var(--text-secondary);">
+                Connect with our support team or explore our platform.
+            </p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="index.html" class="btn btn-primary">Start Now</a>
+                <a href="about.html" class="btn btn-secondary">Learn More</a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="landing.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+            <a href="index.html">Login</a>
+        </div>
+        <p style="color: var(--text-secondary); margin-bottom: 0.5rem;">
+            &copy; 2025 DiagnostiX. All rights reserved.
+        </p>
+    </footer>
+
+    <script src="theme.js"></script>
+    <script src="i18n.js"></script>
+    <script>
+        // Form submission
+        document.getElementById('contactForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+
+            // Show success message
+            const alert = document.getElementById('formAlert');
+            alert.innerHTML = '<div class="alert alert-success">✓ Thank you! Your message has been sent. We'll get back to you soon.</div>';
+
+            // Reset form
+            document.getElementById('contactForm').reset();
+
+            // Clear alert after 5 seconds
+            setTimeout(() => {
+                alert.innerHTML = '';
+            }, 5000);
+        });
+
+        // FAQ toggle
+        function toggleFAQ(event) {
+            const faqItem = event.target.closest('.faq-item');
+            faqItem.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
