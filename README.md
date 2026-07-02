@@ -102,7 +102,7 @@ npm start
 The frontend application will run on:
 
 ```text
-http://localhost:3000
+http://localhost:5173
 ```
 
 ## How It Works

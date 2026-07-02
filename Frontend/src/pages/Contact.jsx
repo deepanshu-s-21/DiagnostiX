@@ -67,7 +67,7 @@ export default function Contact() {
                 <Phone className="detail-icon" />
                 <div>
                   <strong>Phone Line</strong>
-                  <a href="tel:+919876543210">+91 98765 43210</a>
+                  <a href="tel:+919876543210">+91 9999999999</a>
                 </div>
               </div>
 
@@ -75,7 +75,7 @@ export default function Contact() {
                 <MapPin className="detail-icon" />
                 <div>
                   <strong>Center</strong>
-                  <span>Tech Innovation Hub, New Delhi, India 110001</span>
+                  <span>Ghaziabad, Uttar Pradesh</span>
                 </div>
               </div>
             </div>

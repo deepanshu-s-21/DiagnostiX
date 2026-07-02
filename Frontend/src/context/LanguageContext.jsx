@@ -107,7 +107,7 @@ const translations = {
     easy_bruising: "Easy bruising or bleeding from minor cuts"
   },
   hi: {
-    app_title: "डायग्नोस्टिक्स हार्ट",
+    app_title: "डायग्नोस्टिक्स",
     app_subtitle: "AI-संचालित सरल लक्षण-आधारित जोखिम पूर्वानुमान",
     login: "लॉगिन",
     signup: "साइन अप",
